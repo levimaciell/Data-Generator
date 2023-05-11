@@ -2,8 +2,9 @@ package org.levi.files;
 
 import java.util.List;
 
-public abstract class Generator<T> {
+public interface Generator<T> {
 
-    public abstract List<T> generateData(int numberOfData);
+    List<T> generateData(int num);
 
+    void outputInFile(String filename, List<T> elements);
 }
